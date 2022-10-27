@@ -12,6 +12,7 @@
         MinWidth="730"
         Icon="smile.ico">
     <Window.Resources>
+        <local:BooleanToInt x:Key="conversorBoolean"></local:BooleanToInt>
         <Style TargetType="TextBlock"
                x:Key="etiquetaCampo">
             <Setter Property="Margin"
@@ -123,15 +124,18 @@
                     BorderBrush="Black"
                     Margin="10"
                     Width="{Binding ElementName=anchoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
-                           Height="{Binding ElementName=altoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}">
+                            Height="{Binding ElementName=altoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                            BorderThickness="{Binding ElementName=bordeCheckBox, Path=IsChecked, Converter={StaticResource conversorBoolean}}">
                 <Grid>
                     <Image Stretch="Fill" 
                            
                            Source="{Binding ElementName=imagenTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock Style="{StaticResource textoMeme}"
-                               VerticalAlignment="Top"></TextBlock>
+                               VerticalAlignment="Top"
+                               Text="{Binding ElementName=superiorTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                     <TextBlock Style="{StaticResource textoMeme}"
-                               VerticalAlignment="Bottom"></TextBlock>
+                               VerticalAlignment="Bottom"
+                               Text="{Binding ElementName=inferiorTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 </Grid>
             </Border>
         </StackPanel>
