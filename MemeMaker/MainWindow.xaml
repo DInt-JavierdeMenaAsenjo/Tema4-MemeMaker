@@ -121,9 +121,13 @@
             </Grid>
             <Border Background="#FFF3D2D2"
                     BorderBrush="Black"
-                    Margin="10">
+                    Margin="10"
+                    Width="{Binding ElementName=anchoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                           Height="{Binding ElementName=altoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}">
                 <Grid>
-                    <Image Stretch="Fill" />
+                    <Image Stretch="Fill" 
+                           
+                           Source="{Binding ElementName=imagenTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock Style="{StaticResource textoMeme}"
                                VerticalAlignment="Top"></TextBlock>
                     <TextBlock Style="{StaticResource textoMeme}"
