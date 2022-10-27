@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:MemeMaker"
         mc:Ignorable="d"
         Title="MemeMaker"
-        Height="750"
-        Width="730"
-        MinHeight="750"
-        MinWidth="730"
+        Height="800"
+        Width="800"
+        MinHeight="800"
+        MinWidth="800"
         Icon="smile.ico">
     <Window.Resources>
         <local:BooleanToInt x:Key="conversorBoolean"></local:BooleanToInt>
@@ -39,7 +39,7 @@
             <Setter Property="TextAlignment"
                     Value="Center"></Setter>
             <Setter Property="Margin"
-                    Value="0,-5,0,0"></Setter>
+                    Value="15"></Setter>
             <Setter Property="Effect">
                 <Setter.Value>
                     <DropShadowEffect />
@@ -126,9 +126,8 @@
                     Width="{Binding ElementName=anchoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
                             Height="{Binding ElementName=altoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
                             BorderThickness="{Binding ElementName=bordeCheckBox, Path=IsChecked, Converter={StaticResource conversorBoolean}}">
-                <Grid>
+                <Grid x:Name="meme">
                     <Image Stretch="Fill" 
-                           
                            Source="{Binding ElementName=imagenTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock Style="{StaticResource textoMeme}"
                                VerticalAlignment="Top"
@@ -138,6 +137,7 @@
                                Text="{Binding ElementName=inferiorTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 </Grid>
             </Border>
+            <Button Margin="0,15,0,0" Width="150" Height="30" FontWeight="Bold" FontSize="15" Click="DescargarClick" Background="#abf7bf" BorderThickness="2" BorderBrush="DarkGreen">Guardar como...</Button>
         </StackPanel>
     </ScrollViewer>
 </Window>

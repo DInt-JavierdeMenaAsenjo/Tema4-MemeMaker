@@ -101,5 +101,6 @@
   <ItemGroup>
     <Resource Include="smile.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
