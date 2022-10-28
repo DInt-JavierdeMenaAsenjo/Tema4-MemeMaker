@@ -32,10 +32,11 @@ namespace MemeMaker
             bitmap.Render(this.meme);
 
             var dialog = new Microsoft.Win32.SaveFileDialog();
-            dialog.Title = "Guardar como..."; // instead of default "Save As"
-            dialog.FileName = "Meme"; // Filename will then be "select.this.directory"
+            dialog.Title = "Guardar como..."; 
+            dialog.FileName = "Meme"; 
             dialog.Filter = "Imagenes | *.jpeg";
             dialog.DefaultExt = "jpeg";
+
             if (dialog.ShowDialog() == true)
             {
                 string path = dialog.FileName;
@@ -43,7 +44,7 @@ namespace MemeMaker
                 using (FileStream stream = File.Create($"{path}"))
                 {
                     JpegBitmapEncoder encoder = new JpegBitmapEncoder();
-                    encoder.QualityLevel = 90;
+                    encoder.QualityLevel = 100;
                     encoder.Frames.Add(BitmapFrame.Create(bitmap));
                     encoder.Save(stream);
                 }

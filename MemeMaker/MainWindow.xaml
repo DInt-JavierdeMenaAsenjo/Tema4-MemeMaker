@@ -123,18 +123,19 @@
             <Border Background="#FFF3D2D2"
                     BorderBrush="Black"
                     Margin="10"
-                    Width="{Binding ElementName=anchoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
-                            Height="{Binding ElementName=altoSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
-                            BorderThickness="{Binding ElementName=bordeCheckBox, Path=IsChecked, Converter={StaticResource conversorBoolean}}">
+                    Width="{Binding ElementName=anchoSlider, Path=Value}"
+                    Height="{Binding ElementName=altoSlider, Path=Value
+                }"
+                    BorderThickness="{Binding ElementName=bordeCheckBox, Path=IsChecked, Converter={StaticResource conversorBoolean}}">
                 <Grid x:Name="meme">
                     <Image Stretch="Fill" 
-                           Source="{Binding ElementName=imagenTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"/>
+                           Source="{Binding ElementName=imagenTextBox, Path=Text}"/>
                     <TextBlock Style="{StaticResource textoMeme}"
                                VerticalAlignment="Top"
-                               Text="{Binding ElementName=superiorTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                               Text="{Binding ElementName=superiorTextBox, Path=Text}"></TextBlock>
                     <TextBlock Style="{StaticResource textoMeme}"
                                VerticalAlignment="Bottom"
-                               Text="{Binding ElementName=inferiorTextBox, Path=Text, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                               Text="{Binding ElementName=inferiorTextBox, Path=Text}"></TextBlock>
                 </Grid>
             </Border>
             <Button Margin="0,15,0,0" Width="150" Height="30" FontWeight="Bold" FontSize="15" Click="DescargarClick" Background="#abf7bf" BorderThickness="2" BorderBrush="DarkGreen">Guardar como...</Button>

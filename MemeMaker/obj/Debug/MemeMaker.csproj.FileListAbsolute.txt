@@ -29,3 +29,4 @@ C:\Users\Usuario\Source\Repos\Tema4-MemeMaker\MemeMaker\obj\Debug\MemeMaker.cspr
 C:\Users\Usuario\Source\Repos\Tema4-MemeMaker\MemeMaker\obj\Debug\MemeMaker.exe
 C:\Users\Usuario\Source\Repos\Tema4-MemeMaker\MemeMaker\obj\Debug\MemeMaker.pdb
 C:\Users\Usuario\Source\Repos\Tema4-MemeMaker\MemeMaker\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\alumno\Source\Repos\DInt-JavierdeMenaAsenjo\Tema4-MemeMaker\MemeMaker\obj\Debug\GeneratedInternalTypeHelper.g.cs
